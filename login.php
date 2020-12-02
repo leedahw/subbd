@@ -6,18 +6,17 @@ include("includes/standardheader.html");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="login page for subbed">
-    <meta name="keywords" content="HTML, PHP, subbd">
+    <meta name="description" content="login page for IMM News Network">
+    <meta name="keywords" content="HTML, PHP, IMM, News, Network">
     <meta name="author" content="Alana Dahwoon Lee">
-    <title>Login</title>
 </head>
 <body>
     <form action = "process-login.php" method = "POST">
-    emailAddress: <input id="emailAddress" type="email" name="emailAddress" required/><br/>
+    emailAddress: <input type = "email" name ="emailAddress" required/><br/>
     <br/>
-    password: <input id="password" type="password" name="password" required/><br/>
+    password: <input type = "password" name = "password" required/><br/>
     <br/>
-    <input id="loginButton" type="submit" value="login">
+    <input type = "submit" value="login">
     </form>
 
     <a href = "signup.php">Not a member? Sign Up Here!</a>

@@ -6,14 +6,19 @@ $firstName = $_POST["fName"];
 $lastName = $_POST["lName"];
 $emailAddress = $_POST["emailAddress"];
 $password = $_POST["password"];
-$DOB = $_POST["DOB"];
+$currency = $_POST["currency"];
 
 //this part adds a new user to the 'user' table
-include('includes/dbconfig.php');
+$dsn = "mysql:host=localhost;dbname=subbd;charset=utf8mb4";
 
+$dbusername = "root";
+$dbpassword = "";
+$pdo = new PDO($dsn, $dbusername, $dbpassword); 
+
+//stmtand execute
 $stmt = $pdo->prepare("INSERT INTO `user` 
-	(`userId`, `fName`, `lName`, `emailAddress`, `password`, `DOB`) 
-	VALUES (NULL, '$firstName', '$lastName', '$emailAddress', '$password', '$DOB');");
+	(`userId`, `fName`, `lName`, `emailAddress`, `password`, `currency`) 
+	VALUES (NULL, '$firstName', '$lastName', '$emailAddress', '$password', '$currency');");
 
 $stmt->execute();
 ?>

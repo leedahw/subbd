@@ -18,11 +18,11 @@ $stmt->execute();
 
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-if($row["userType"]){
+if($row){
 	//session declarations
-	$_SESSION["userId"] = $row["userId"];
-	$_SESSION["userType"] = $row["userType"];
-	//admin login
+	$_SESSION["userId"] =$row["userId"];
+
+	//success login
 	?><p>Welcome Back!</p>
 	<a href="homepage.php">Go to Home</a><?php
 

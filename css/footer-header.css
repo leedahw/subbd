@@ -5,6 +5,7 @@ header{
     display:flex;
     align-items: center;
     background-color: white;
+    color: black;
 
 }
 
@@ -20,14 +21,13 @@ img{
 }
 
 a:link{
-    color:"#222222";
+    color:#222222;
     text-decoration: none;
-    color: black;
-    font-weight: 400;
+    font-weight: 700;
 
 }
 
 #logout-button {
-    position: absolute;
-    left: 95%;
+    color:grey;
+    font-weight:400;
 }
