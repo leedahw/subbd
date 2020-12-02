@@ -9,11 +9,7 @@ $password = $_POST["password"];
 $currency = $_POST["currency"];
 
 //this part adds a new user to the 'user' table
-$dsn = "mysql:host=localhost;dbname=subbd;charset=utf8mb4";
-
-$dbusername = "root";
-$dbpassword = "";
-$pdo = new PDO($dsn, $dbusername, $dbpassword); 
+include('includes/dbconfig.php');
 
 //stmtand execute
 $stmt = $pdo->prepare("INSERT INTO `user` 

@@ -6,12 +6,14 @@ header{
     align-items: center;
     background-color: white;
     color: black;
+    height: 2rem;
+
 
 }
 
 li{
     list-style-type: none;
-    float:left;
+    display: inline-block;
     margin-left:1rem;
 
 }
@@ -29,5 +31,8 @@ a:link{
 
 #logout-button {
     color:grey;
+    position:absolute;
+    left:90%;
     font-weight:400;
+    font-size: .8rem;
 }
