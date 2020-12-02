@@ -1,16 +1,15 @@
 <?php 
 session_start();
-if($_SESSION["userType"]=='admin'){
+if($row){
 //process-insert-article.php
+$_SESSION["userId"] =$row["userId"]; //if session userId equals userId
 
 //declare and receive input
+$userId = $_SESSION["userId"];
+$subName = $_POST["subName"];
 $category = $_POST["category"];
-$title = $_POST["title"];
-$author = $_POST["author"];
-$category = $_POST["category"];
-$content = addslashes($_POST["content"]);
-$articleLink = $_POST["articleLink"];
-$featured = $_POST["featured"];
+$frequency = $_POST["frequency"];
+$cost = $_POST["cost"];
 $img = $_FILES["img"]["name"];
 
 //insert a new person record into the person table
@@ -19,7 +18,7 @@ include('includes/dbconfig.php');
 
 $stmt = $pdo->prepare("INSERT INTO `subscription` 
 	(`subId`, `userId`, `subName`,  `category`, `frequency`, `cost`, `img`) 
-	VALUES (NULL, '$title', '$author', '$category', '$content', '$articleLink', '$img');");
+	VALUES (NULL, '$userId', '$subName', '$category', '$frequency', '$cost', '$img');");
 
 $uploaddir = "uploads/";
 $uploadfile = $uploaddir . basename($_FILES["img"]["name"], time(). "_{$img}");
