@@ -1,11 +1,9 @@
 <?php session_start();
 //homepage.php
 
-include("includes/dbconfig.php");
 include("includes/standardheader.html");
-
-$userId = $_SESSION["userId"];
 //value for userId insert into subscription table 
+$userId = $_SESSION["userId"];
 ?>
 <html lang="en">
 <head>
@@ -27,8 +25,10 @@ $userId = $_SESSION["userId"];
 </header>
 
 <?php
+include("includes/dbconfig.php");
+
 $stmt = $pdo->prepare("SELECT * FROM `subscriptions` 
-                    WHERE `subId` . `userId` = $userId");
+                    WHERE `subId` . `userId` = '$userId'");
 $stmt->execute();
 while ($row = $stmt->fetch(PDO:: FETCH_ASSOC)){
 
