@@ -25,10 +25,12 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);?>
 <h1>Welcome Back, <?php echo($row["fName"]);?>!</h1>
 <!-- show donut chart of subbs based on category-->
 
+<div id="chart">
 <?php include("includes/google-chart.php"); ?>
+</div>
 
 <!-- full list of subbs echoed by referring to Session userId-->
-<div class="all-subbs" id="all-subbs">
+<section class="all-subbs" id="all-subbs">
 <h2>Your Subbs</h2>
 <header>
     <ul>
@@ -58,10 +60,11 @@ while($row = $stmt1->fetch(PDO::FETCH_ASSOC)) { ?>
     echo($row["currency"]);
     echo("</h3>");?>
 
-</div><?php
+</div>
+<?php
 }
 ?>
-</div>
+</section>
 
 </body>
 </html>
