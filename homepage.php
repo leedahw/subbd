@@ -22,7 +22,7 @@ $stmt = $pdo->prepare("SELECT * FROM `user`
 $stmt->execute();
 $row = $stmt->fetch(PDO::FETCH_ASSOC);?>
 
-<h1>Welcome Back, <?php echo($row["fName"]);?>!</h1>
+<h1 id="welcome-msg">Welcome Back, <?php echo($row["fName"]);?>!</h1>
 <!-- show donut chart of subbs based on category-->
 
 <div id="chart">
@@ -55,8 +55,9 @@ while($row = $stmt1->fetch(PDO::FETCH_ASSOC)) { ?>
     echo("<p id=frequency>");
     echo($row["frequency"]);
     echo("</p>");
-    echo("<h3>");
-    echo($row["cost"]);
+    echo("<h3 id= money>");
+    echo($row["cost"] );
+    echo(" ");
     echo($row["currency"]);
     echo("</h3>");?>
 
