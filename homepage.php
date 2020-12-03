@@ -32,11 +32,11 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);?>
 <!-- full list of subbs echoed by referring to Session userId-->
 <section class="all-subbs" id="all-subbs">
 <h2>Your Subbs</h2>
-<header>
+<div id="add-new">
     <ul>
         <li><a id="new-subb-button" href="insert-subb.php">Add New Subb</a></li>
     </ul>
-</header>
+</div>
 
 <?php
 $stmt1 = $pdo->prepare("SELECT * FROM `subscription` 
