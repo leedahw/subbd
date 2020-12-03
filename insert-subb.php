@@ -1,9 +1,11 @@
 <?php
 session_start(); //session
 include('includes/standardheader.html');
-if($row){
-	$_SESSION["userId"] = $row["userId"];
-//allowed to see this page
+include('includes/dbconfig.php');
+
+if($_SESSION["userId"]){
+$userId= $_SESSION["userId"]; 
+//allowed to see this page ig logged in correctly
 //insert-article.php
 ?>
 
@@ -17,21 +19,26 @@ if($row){
     <title>New Subb</title>
 </head>
 <body>
-	<form action="process-insert-article.php" method="POST" enctype = "multipart/form-data">
-		Title: <input type="text" name="title" required/><br/><br/>
-		Author: <input type="text" name="author" required/><br/><br/>
-		Preview: <input type="text" name="content" required/><br/><br/>
-		Category: <select name="category" id="category">
-			<option value = "tech">tech</option>
-			<option value = "industry">industry</option>
-			<option value = "career">career</option>
-			</select><br/><br/>
-		Featured: <select name="featured" id="featured">
-			<option value = "yes">yes</option>
-			<option value = "no">no</option>
-		</select><br/><br/>
-		Link: <input type="URL" name="articleLink" /><br/><br/>
-		<input type="submit" value = "Submit" />
+	<form id="insert-subb-form" action="process-insert-subb.php" method="POST" enctype= "multipart/form-data">
+		<h3>Subb Name: <input type="text" name="subName" required/><h3>
+		<h3>Category: </h3>	
+			<div id="radio-buttons">
+			<input type="radio" id="entertainment" name="category" value="entertainment"/>
+				<label for="entertainment">entertainment</label>
+			<input type="radio" id="productivity" name="category" value="productivity"/>
+				<label for="productivity">productivity</label>
+			<input type="radio" id="utilities" name="category" value="utilities"/>
+				<label for="utilities">utilities</label>
+			</div>
+		<h3>Frequency: <select name="frequency" id="frequency">
+			<option value = "weekly">weekly</option>
+			<option value = "monthly">monthly</option>
+			<option value = "yearly">yearly</option>
+			</select></h3>
+		<h3>Cost: $ <input type= "number" step= "0.01" id="currency" name="cost"/> <input type="text" id="currency"name="currency" value="CAD"/></h3>
+		<br/><br/>
+		<a id="cancel" href="homepage.php">Cancel</a>
+		<input type="submit" value = "submit"/>
 	</form>
 	</body>
     </html><?php

@@ -22,7 +22,6 @@ include("includes/standardheader.html");
     <br/>
     password: <input type = "password" name = "password" required/><br/>
     <br/>
-    Currency: <input type = "currency" name="currency" required/><br/>
     <input type = "submit">
     </form>
     

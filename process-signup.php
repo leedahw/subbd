@@ -13,8 +13,8 @@ include('includes/dbconfig.php');
 
 //stmtand execute
 $stmt = $pdo->prepare("INSERT INTO `user` 
-	(`userId`, `fName`, `lName`, `emailAddress`, `password`, `currency`) 
-	VALUES (NULL, '$firstName', '$lastName', '$emailAddress', '$password', '$currency');");
+	(`userId`, `fName`, `lName`, `emailAddress`, `password`) 
+	VALUES (NULL, '$firstName', '$lastName', '$emailAddress', '$password');");
 
 $stmt->execute();
 ?>
