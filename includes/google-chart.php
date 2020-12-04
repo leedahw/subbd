@@ -23,6 +23,7 @@ $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
         var options = {
           title: 'Your Subb Breakdown',
           pieHole: 0.6,
+          colors: ['#7d00b5','#38d4ce','#fa0079'],
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
@@ -31,6 +32,6 @@ $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </script>
 </head>
 <body>
-<div id="donutchart dropshadow" style="width: 900px; height: 500px;"></div>
+<div id="donutchart" style="width: 900px; height: 500px;"></div>
 </body>
 </html>

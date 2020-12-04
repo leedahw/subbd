@@ -10,16 +10,18 @@ include("includes/standardheader.html");
     <meta name="keywords" content="HTML, PHP, IMM, News, Network">
     <meta name="author" content="Alana Dahwoon Lee">
 </head>
-<body>
-    <form action = "process-login.php" method = "POST">
-    <input type = "email" name ="emailAddress" placeholder="emailAddress" required/><br/>
+<body id="gradient-back">
+    <div class="backing">
+    <form class="drop-shadow form" id="login-form" action = "process-login.php" method = "POST">
+    <h2 class="form-title" id="login-title">LOGIN</h2>
+    <input class="form-input" type = "email" name ="emailAddress" placeholder="email address" required/><br/>
     <br/>
-    <input type = "password" name = "password" placeholder="password" required/><br/>
+    <input class="form-input" type = "password" name = "password" placeholder="password" required/><br/>
     <br/>
-    <input type = "submit" value="login">
-    <a id="signup-link" href = "signup.php">Not a member? Sign Up Here!</a>
+    <input class="form-button" type="submit" value="login">
+    <a class="form-link" id="signup-link" href ="signup.php">Not a member? Sign Up Here!</a>
     </form>
-
+    </div>  
     
 </body>
 </html>
