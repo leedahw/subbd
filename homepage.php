@@ -25,7 +25,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);?>
 <h1 id="welcome-msg">Welcome Back, <?php echo($row["fName"]);?>!</h1>
 <!-- show donut chart of subbs based on category-->
 
-<div id="chart">
+<div class="drop-shadow" id="chart">
 <?php include("includes/google-chart.php"); ?>
 </div>
 
@@ -43,7 +43,7 @@ $stmt1 = $pdo->prepare("SELECT * FROM `subscription`
                     WHERE `subscription` . `userId` = '$userId'");
 $stmt1->execute();
 while($row = $stmt1->fetch(PDO::FETCH_ASSOC)) { ?>
-    <div id="indiv-subb">
+    <div class="drop-shadow" id="indiv-subb">
     <a class= "link" href = "edit-subb.php?subId=<?php echo($row["subId"]);?>">EDIT</a>
     <?php
     echo("<h3>");

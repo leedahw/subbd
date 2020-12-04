@@ -14,15 +14,20 @@ a:link{
     margin-top:.5rem;
 }
 
+.drop-shadow{
+    -moz-box-shadow: 3px 3px 5px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 3px 3px 5px rgba(0,0,0,0.4);
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.4);
+}
+
 #indiv-subb {
     float:left;
     width:33%;
-    border: solid grey;
-    border-width: 2px;
     border-radius: .5rem;
     margin:2rem;
     padding-left:1rem;
     padding-right: 1rem;
+
 }
 
 #money{
@@ -30,4 +35,17 @@ a:link{
     margin-bottom: .5rem;
     font-weight: 700;
     font-size: 1.5rem;
+}
+
+#chart{
+    width:50%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+#donutchart {
+    background-color: white;
+
+    left: 3rem;
 }

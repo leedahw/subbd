@@ -12,14 +12,14 @@ include("includes/standardheader.html");
 </head>
 <body>
     <form action = "process-login.php" method = "POST">
-    emailAddress: <input type = "email" name ="emailAddress" required/><br/>
+    <input type = "email" name ="emailAddress" placeholder="emailAddress" required/><br/>
     <br/>
-    password: <input type = "password" name = "password" required/><br/>
+    <input type = "password" name = "password" placeholder="password" required/><br/>
     <br/>
     <input type = "submit" value="login">
+    <a id="signup-link" href = "signup.php">Not a member? Sign Up Here!</a>
     </form>
 
-    <a href = "signup.php">Not a member? Sign Up Here!</a>
     
 </body>
 </html>
