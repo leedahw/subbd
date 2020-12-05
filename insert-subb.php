@@ -18,27 +18,24 @@ $userId= $_SESSION["userId"];
     <meta name="author" content="Alana Dahwoon Lee">
     <title>New Subb</title>
 </head>
-<body>
-	<form id="insert-subb-form" action="process-insert-subb.php" method="POST" enctype= "multipart/form-data">
+<body id="gradient-back">
+	<form class="drop-shadow" id="insert-subb-form" action="process-insert-subb.php" method="POST" enctype= "multipart/form-data">
 		<h3>Subb Name: <input type="text" name="subName" required/><h3>
-		<h3>Category: </h3>	
-			<div id="radio-buttons">
-			<input type="radio" id="entertainment" name="category" value="entertainment"/>
-				<label for="entertainment">entertainment</label>
-			<input type="radio" id="productivity" name="category" value="productivity"/>
-				<label for="productivity">productivity</label>
-			<input type="radio" id="utilities" name="category" value="utilities"/>
-				<label for="utilities">utilities</label>
-			</div>
+		<div id="radio-buttons">
+		<h3 id="category-label">Category:</h3>	
+			<label><input type="radio" id="entertainment" name="category" value="entertainment"/>entertainment</label>		
+			<label><input type="radio" id="productivity" name="category" value="productivity"/>productivity</label>
+			<label><input type="radio" id="utilities" name="category" value="utilities"/>utilities</label>		
+		</div>
 		<h3>Frequency: <select name="frequency" id="frequency">
 			<option value = "weekly">weekly</option>
 			<option value = "monthly">monthly</option>
 			<option value = "yearly">yearly</option>
 			</select></h3>
-		<h3>Cost: $ <input type= "number" step= "0.01" id="currency" name="cost"/> <input type="text" id="currency"name="currency" value="CAD"/></h3>
-		<br/><br/>
-		<a id="cancel" href="homepage.php">Cancel</a>
+		<h3>Cost: $ <input type= "number" step= "0.01" id="cost" name="cost"/> <input type="text" id="currency"name="currency" value="CAD"/></h3>
+		<br/>
 		<input type="submit" value = "submit"/>
+		<a id="cancel" href="homepage.php">Cancel</a>
 	</form>
 	</body>
     </html><?php

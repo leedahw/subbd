@@ -1,7 +1,7 @@
 <?php
 include("dbconfig.php");
 
-$stmt = $pdo->prepare("SELECT COUNT(category) as tcount,`category` FROM `subscription` GROUP BY `category`");
+$stmt = $pdo->prepare("SELECT COUNT(category) as tcount,`category` FROM `subscription` WHERE `userId` = '$userId' GROUP BY `category`");
 $stmt->execute();
 $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>

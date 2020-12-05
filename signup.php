@@ -23,6 +23,7 @@ include("includes/standardheader.html");
     password: <input type = "password" name = "password" required/><br/>
     <br/>
     <input type = "submit">
+    <a class="form-link" id="signup-link" style="color:grey" href ="login.php">Already a member? Login Here!</a>
     </form>
     
 </body>

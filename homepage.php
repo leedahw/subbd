@@ -24,27 +24,27 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);?>
 
 <h1 id="welcome-msg">Welcome Back, <?php echo($row["fName"]);?>!</h1>
 <!-- show donut chart of subbs based on category-->
-
+<section id="full-page">
+    
 <div class="drop-shadow" id="chart">
 <?php include("includes/google-chart.php"); ?>
 </div>
 
 <!-- full list of subbs echoed by referring to Session userId-->
-<section class="all-subbs" id="all-subbs">
-<h2>Your Subbs</h2>
-<div id="add-new">
-    <ul>
-        <li><a id="new-subb-button" href="insert-subb.php">Add New Subb</a></li>
-    </ul>
-</div>
-
+<div class="all-subbs" id="all-subbs">
+    <div class="align-items">
+        <h2 id="your-subbs">Your Subbs</h2>
+        <a id="new-subb-button" href="insert-subb.php">
+            <i id="addnew" class="fas fa-plus-circle"></i></a>
+    </div>
 <?php
 $stmt1 = $pdo->prepare("SELECT * FROM `subscription` 
                     WHERE `subscription` . `userId` = '$userId'");
 $stmt1->execute();
 while($row = $stmt1->fetch(PDO::FETCH_ASSOC)) { ?>
     <div class="drop-shadow" id="indiv-subb">
-    <a class= "link" href = "edit-subb.php?subId=<?php echo($row["subId"]);?>">EDIT</a>
+    <button class="more-button" id="more-button"><i class="fas fa-ellipsis-v"></i></button>
+    <a class= "link" id="edit-link" href = "edit-subb.php?subId=<?php echo($row["subId"]);?>">EDIT</a>
     <?php
     echo("<h3>");
     echo($row["subName"]);
@@ -65,7 +65,7 @@ while($row = $stmt1->fetch(PDO::FETCH_ASSOC)) { ?>
 <?php
 }
 ?>
+</div>
 </section>
-
 </body>
 </html>

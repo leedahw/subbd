@@ -12,7 +12,7 @@ if($_SESSION["userId"]){
     <meta name="author" content="Alana Dahwoon Lee">
     <title>edit subb form</title>
 </head>
-<body> 
+<body class="gradient-back"> 
 <?php        
 //connect to db
 	include("includes/dbconfig.php");
@@ -46,8 +46,8 @@ if($_SESSION["userId"]){
         <h3>Cost: $ <input type= "number" step= "0.01" id="currency" name="cost" value="<?php echo($row["cost"]);?>"/>
         <input type="text" id="currency"name="currency" value="<?php echo($row["currency"]);?>"/></h3>
 
-        <a id="cancel" href="homepage.php">Cancel</a>
         <input type="submit" value="Confirm Edit"/>
+        <a id="cancel" href="homepage.php">Cancel</a>
     </form>
     </body>
     </html>

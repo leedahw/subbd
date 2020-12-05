@@ -10,7 +10,7 @@ include("includes/standardheader.html");
     <meta name="keywords" content="HTML, PHP, IMM, News, Network">
     <meta name="author" content="Alana Dahwoon Lee">
 </head>
-<body id="gradient-back">
+<body class="gradient-back">
     <div class="backing">
     <form class="drop-shadow form" id="login-form" action = "process-login.php" method = "POST">
     <h2 class="form-title" id="login-title">LOGIN</h2>
@@ -19,7 +19,7 @@ include("includes/standardheader.html");
     <input class="form-input" type = "password" name = "password" placeholder="password" required/><br/>
     <br/>
     <input class="form-button" type="submit" value="login">
-    <a class="form-link" id="signup-link" href ="signup.php">Not a member? Sign Up Here!</a>
+    <a class="form-link" id="signup-link" style="color:grey" href ="signup.php">Not a member? Sign Up Here!</a>
     </form>
     </div>  
     
