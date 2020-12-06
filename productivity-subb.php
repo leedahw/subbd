@@ -23,8 +23,8 @@ WHERE `subscription`.`userId` = $userId AND `subscription`.`category`= 'producti
 
 $stmt->execute();
 
-$row = $stmt->fetch(PDO:: FETCH_ASSOC);?>
-<div id= "indiv-subb"><?php
+while($row = $stmt->fetch(PDO:: FETCH_ASSOC)){
+    echo("<div id=view-subbs>");
     echo("<h3>");
     echo($row["subName"]);
     echo("</h3>");
@@ -38,7 +38,9 @@ $row = $stmt->fetch(PDO:: FETCH_ASSOC);?>
     echo($row["cost"] );
     echo(" ");
     echo($row["currency"]);
-    echo("</h3>");?>
+    echo("</h3>");
+    echo("</div>");
+}?>
 </div>
 </body>
 </html>

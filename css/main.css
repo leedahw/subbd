@@ -76,9 +76,10 @@ a:link{
 }
 
 .view-subbs {
- widows: 50%;
- margin-left:auto;
- margin-right:auto;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
 }
 
 a#new-subb-button {
