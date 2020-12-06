@@ -29,7 +29,10 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);?>
 <div class="drop-shadow" id="chart">
 <?php include("includes/google-chart.php"); ?>
 </div>
+<!-- buttons to navigate to view subb by category-->
 
+
+</section>
 <!-- full list of subbs echoed by referring to Session userId-->
 <div class="all-subbs" id="all-subbs">
     <div class="align-items">
@@ -60,12 +63,13 @@ while($row = $stmt1->fetch(PDO::FETCH_ASSOC)) { ?>
     echo(" ");
     echo($row["currency"]);
     echo("</h3>");?>
+    <a class="view-subb" href = "view-subb.php?subId=<?php echo($row["subId"]);?>">Read More</a><br/>
 
 </div>
 <?php
 }
 ?>
 </div>
-</section>
+
 </body>
 </html>

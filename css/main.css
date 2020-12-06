@@ -36,21 +36,15 @@ a:link{
 }
 
 #full-page{
-    display:flex;
-    flex-direction: row;
-    margin-left:4rem;
-    margin-right:4rem;
+
 
 }
 
-#your-subbs {
-    margin-left: 2rem;
-}
 
 /*~~homepage-subbs~~*/
 #indiv-subb {
     float:left;
-    width:80%;
+    width:100%;
     border-radius: .5rem;
     margin:2rem;
     padding-left:1rem;
@@ -71,6 +65,8 @@ a:link{
 }
 
 .align-items{
+    margin-top: 3rem;
+    margin-left: 2rem;
     width:100%;
     display: flex;
     justify-content: space-between;
@@ -78,9 +74,14 @@ a:link{
 }
 
 .all-subbs{
-    margin-left:auto;
+
     margin-right:auto;
     width:50%;
+}
+
+.view-subbs {
+    float:left;
+    color:grey;
 }
 
 /*~~google chart stuff~~*/
@@ -190,8 +191,7 @@ label{
 
 .fa-plus-circle{
 font-size:32px; 
-color: #fa0079; 
-margin-right:5rem; 
+color: #fa0079;  
 padding-top:1.25rem;
 text-shadow: 3px 3px 5px rgba(0,0,0,0.2);
 }
