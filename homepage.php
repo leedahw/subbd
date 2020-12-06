@@ -42,7 +42,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);?>
             </div>    
     <!-- buttons to navigate to view subb by category-->
 
-    <ul class="align-items" id= "category-nav">
+    <ul id= "category-nav">
         <li><a class="category-link white-text drop-shadow" id="blue-back" href= "productivity-subb.php">PRODUCTIVITY</a></li>
         <li><a class="category-link white-text drop-shadow"  id="pink-back" href= "utility-subb.php">UTILITIES</a></li>
         <li><a class="category-link white-text drop-shadow" id="purple-back" href= "entertainment-subb.php">ENTERTAINMENT</a></li>
@@ -55,7 +55,15 @@ $stmt1->execute();
 while($row = $stmt1->fetch(PDO::FETCH_ASSOC)) { ?>
     <div class="drop-shadow" id="indiv-subb">
     <button class="more-button" id="more-button"><i class="fas fa-ellipsis-v"></i></button>
-    <a class= "link" id="edit-link" href = "edit-subb.php?subId=<?php echo($row["subId"]);?>">EDIT</a>
+    <div class="modal" id="modal">
+        <!-- Modal content -->
+        <div id="modal-content" class="modal-content drop-shadow">
+            <span class="close">&times;</span>
+            <p>edit / delete Subb?</p>
+            <a class= "link" id="edit-link" href = "edit-subb.php?subId=<?php echo($row["subId"]);?>">EDIT</a>
+            <a class ="link" id="delete-link" href="delete-subb.php?subId=<?php echo($row["subId"]);?>">DELETE</a>
+        </div>
+    </div>
     <?php
     echo("<h3>");
     echo($row["subName"]);
@@ -77,5 +85,6 @@ while($row = $stmt1->fetch(PDO::FETCH_ASSOC)) { ?>
 ?>
 </div>
 </section>
+<script src="js/modal.js"></script>
 </body>
 </html>
