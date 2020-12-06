@@ -28,18 +28,26 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);?>
     
 <div class="drop-shadow" id="chart">
 <?php include("includes/google-chart.php"); ?>
+
 </div>
-<!-- buttons to navigate to view subb by category-->
 
 
-</section>
 <!-- full list of subbs echoed by referring to Session userId-->
 <div class="all-subbs" id="all-subbs">
     <div class="align-items">
         <h2 id="your-subbs">Your Subbs</h2>
+        
         <a id="new-subb-button" href="insert-subb.php">
-            <i id="addnew" class="fas fa-plus-circle"></i></a>
-    </div>
+            ADD NEW<i id="addnew" class="fas fa-plus-circle"></i></a>
+            </div>    
+    <!-- buttons to navigate to view subb by category-->
+
+    <ul class="align-items" id= "category-nav">
+        <li><a class="category-link white-text drop-shadow" id="blue-back" href= "productivity-subb.php">PRODUCTIVITY</a></li>
+        <li><a class="category-link white-text drop-shadow"  id="pink-back" href= "utility-subb.php">UTILITIES</a></li>
+        <li><a class="category-link white-text drop-shadow" id="purple-back" href= "entertainment-subb.php">ENTERTAINMENT</a></li>
+    </ul>
+
 <?php
 $stmt1 = $pdo->prepare("SELECT * FROM `subscription` 
                     WHERE `subscription` . `userId` = '$userId'");
@@ -63,13 +71,11 @@ while($row = $stmt1->fetch(PDO::FETCH_ASSOC)) { ?>
     echo(" ");
     echo($row["currency"]);
     echo("</h3>");?>
-    <a class="view-subb" href = "view-subb.php?subId=<?php echo($row["subId"]);?>">Read More</a><br/>
-
 </div>
 <?php
 }
 ?>
 </div>
-
+</section>
 </body>
 </html>

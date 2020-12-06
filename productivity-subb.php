@@ -14,18 +14,17 @@
 
 <?php
 $userId = $_SESSION["userId"];
-$subId = $_GET["subId"];
-$category = $_GET["category"];
 
 //get records from db vv
 include("includes/dbconfig.php");
 
 $stmt = $pdo->prepare("SELECT * FROM `subscription`
-WHERE `subId` = $subId AND `userId` = '$userId' AND `category`= '$category'");
+WHERE `subscription`.`userId` = $userId AND `subscription`.`category`= 'productivity'");
 
 $stmt->execute();
 
-$row = $stmt->fetch(PDO:: FETCH_ASSOC);
+$row = $stmt->fetch(PDO:: FETCH_ASSOC);?>
+<div id= "indiv-subb"><?php
     echo("<h3>");
     echo($row["subName"]);
     echo("</h3>");
@@ -40,5 +39,6 @@ $row = $stmt->fetch(PDO:: FETCH_ASSOC);
     echo(" ");
     echo($row["currency"]);
     echo("</h3>");?>
+</div>
 </body>
 </html>

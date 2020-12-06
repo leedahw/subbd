@@ -15,13 +15,12 @@
 <?php
 $userId = $_SESSION["userId"];
 $subId = $_GET["subId"];
-$category = $_GET["category"];
 
 //get records from db vv
 include("includes/dbconfig.php");
 
 $stmt = $pdo->prepare("SELECT * FROM `subscription`
-WHERE `subId` = $subId AND `userId` = '$userId' AND `category`= '$category'");
+WHERE `subId` = $subId AND `userId` = '$userId' AND `category`= 'entertainment'");
 
 $stmt->execute();
 
