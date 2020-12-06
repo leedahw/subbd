@@ -23,7 +23,7 @@ $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
         var options = {
           title: 'Your Subb Breakdown',
           pieHole: 0.6,
-          colors: ['#7d00b5','#38d4ce','#fa0079'],
+          colors: ['#5b49db','#ffa378','#ff55ec'],
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
