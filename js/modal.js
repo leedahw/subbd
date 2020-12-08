@@ -1,27 +1,38 @@
-var modal = document.querySelectorAll("#modal")[0];
-var modalContent = document.querySelectorAll("#modal-content")[0];
-var button = document.querySelectorAll("#more-button")[0];
-var span = document.getElementsByClassName("close")[0];
+var modals= document.querySelectorAll("#modal");
+var spans= document.querySelectorAll(".close");
+var buttons= document.querySelectorAll(".more-button");
 
-button.addEventListener("click", openModal, false);
+
+buttons.forEach(button =>{
+    button.addEventListener('click', event =>{
+        console.log("open");
+        openModal();
+    });
+});
 
 function openModal(event){
-    event.preventDefault();
-    console.log("open");
+for (var i=0; i<modals.length; i++){
     //DOM manipulation
-    modal.style.display="block";
-    modalContent.style.display="block";
-    button.style.display="none";
+    modals[i].style.display='block';
+//     button.style.display='none';
+}
 }
 
-span.addEventListener("click", closeModal,false);
+// function closeModal(event){
 
-function closeModal(event){
-    event.preventDefault();
-    console.log("closed");
+//     console.log("closed");
 
-    //DOM manipulation
-    modal.style.display="none";
-    modalContent.style.display="none";
-    button.style.display="block";
-}
+//     //DOM manipulation
+//     modal.style.display="none";
+//     // button.style.display="block";
+// }
+
+// buttons.forEach(button =>{
+//     span.addEventListener('click', event =>{
+//         console.log("close");
+//         closeModal();
+//     });
+// });
+
+
+
