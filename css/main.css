@@ -38,8 +38,12 @@ a:link{
 }
 
 #full-page{
+margin-right: auto;
+}
 
-
+.rem-margin {
+    margin-top:-1rem;
+    margin-left:2rem;
 }
 
 
@@ -79,11 +83,26 @@ a:link{
     margin-right:auto;
 }
 
-.view-subbs {
-    width: 75%;
+#view-subbs {
+
+    width: 33%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 60px;
+    margin-top: 3rempx;
+    margin-left: 2rem;
+    float:left;
+    border-radius: .5rem;
+    padding-left:1rem;
+    padding-right: 1rem;
+    /* color:white; */
+}
+
+.subb-title{
+    margin-left:2rem;
+    font-size: 2rem;
+}
+
+#cat-subb{
 }
 
 a#new-subb-button {
@@ -114,17 +133,17 @@ margin-bottom:-1px;
     margin-right:auto;
 }
 
-#pink-back {
+#pink-back, .pink-back {
     background-color: #ff55ec;
     color:#FFFFFF;
 }
 
-#purple-back {
+#purple-back, .purple-back {
     background-color: #5b49db;
     color:#FFFFFF;
 }
 
-#blue-back{
+#blue-back, .blue-back{
     background-color: #ffa378;
     color:#FFFFFF;
 }
@@ -175,11 +194,12 @@ cursor: pointer;
 
 /*~~google chart stuff~~*/
 #chart{
-    width:50%;
+    width:99%;
     height:50%;
     justify-content: center;
     display: flex;
     align-items: center;
+    align-self: center;
     margin-left:auto;
     margin-right:auto;
     overflow: hidden;
@@ -197,6 +217,19 @@ rect{
     left: 3rem;
 }
 
+#breakdown-div{
+    width: 50%;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: auto;
+}
+
+#breakdown-title{
+    position:relative;
+    width: fit-content;
+}
 
 /*~~forms~~*/
 .gradient-back{

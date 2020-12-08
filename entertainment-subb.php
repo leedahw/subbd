@@ -11,6 +11,9 @@
     <meta name="author" content="Alana Dahwoon Lee">
 </head>
 <body>
+<section id ="full-page">
+<h1 class="subb-title"> Entertainment Subbs</h1>
+<div id="cat-subb">
 
 <?php
 $userId = $_SESSION["userId"];
@@ -24,7 +27,7 @@ WHERE `subscription`.`userId` = $userId AND `subscription`.`category`= 'entertai
 $stmt->execute();
 
 while($row = $stmt->fetch(PDO:: FETCH_ASSOC)){
-    echo("<div id=view-subbs>");
+    echo("<div class='purple-back drop-shadow' id=view-subbs>");
     echo("<h3>");
     echo($row["subName"]);
     echo("</h3>");
@@ -41,5 +44,7 @@ while($row = $stmt->fetch(PDO:: FETCH_ASSOC)){
     echo("</h3>");
     echo("</div>");
 }?>
+</div>
+</section>
 </body>
 </html>

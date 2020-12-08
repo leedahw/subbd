@@ -9,9 +9,13 @@
     <meta name="description" content="article page for IMM News Network">
     <meta name="keywords" content="HTML, PHP, IMM, News, Network, article page">
     <meta name="author" content="Alana Dahwoon Lee">
+    <title>Subb'd utilities</title>
 </head>
 <body>
 
+<section id ="full-page">
+<h1 class="subb-title"> Utility Subbs</h1>
+<div id="cat-subb">
 <?php
 $userId = $_SESSION["userId"];
 
@@ -26,7 +30,7 @@ WHERE `subscription`.`userId` = $userId AND `subscription`.`category`= 'utilitie
 $stmt->execute();
 
 while($row = $stmt->fetch(PDO:: FETCH_ASSOC)){
-    echo("<div id=view-subbs>");
+    echo("<div class= 'pink-back drop-shadow' id=view-subbs>");
     echo("<h3>");
     echo($row["subName"]);
     echo("</h3>");
@@ -43,5 +47,7 @@ while($row = $stmt->fetch(PDO:: FETCH_ASSOC)){
     echo("</h3>");
     echo("</div>");
 }?>
+</div>
+</section>
 </body>
 </html>

@@ -23,12 +23,21 @@ $stmt->execute();
 $row = $stmt->fetch(PDO::FETCH_ASSOC);?>
 
 <h1 id="welcome-msg">Welcome Back, <?php echo($row["fName"]);?>!</h1>
+
+<?php
+$stmt2 = $pdo->prepare("SELECT SUM(`cost`) AS sum_cost FROM `subscription` WHERE `userId`= '$userId' GROUP BY `userId`"); 
+$stmt2->execute();
+$row = $stmt2->fetch(PDO::FETCH_ASSOC);?>
+
+<h2 class="rem-margin">You are currently spending $<?php echo($row["sum_cost"]);?> per month on subscriptions.</h2>
+<br/><br/>
 <!-- show donut chart of subbs based on category-->
 <section id="full-page">
-    
+<div id="breakdown-div">
+<h2 id="breakdown-title"> Your Monthly Subbs Breakdown</h2>   
 <div class="drop-shadow" id="chart">
 <?php include("includes/google-chart.php"); ?>
-
+</div>
 </div>
 
 

@@ -1,21 +1,18 @@
-var modals= document.querySelectorAll("#modal");
+var modals= document.getElementsByClassName(".modal");
 var spans= document.querySelectorAll(".close");
 var buttons= document.querySelectorAll(".more-button");
 
 
 buttons.forEach(button =>{
     button.addEventListener('click', event =>{
-        console.log("open");
-        openModal();
+        console.log(button);
+            openModal();
     });
 });
 
 function openModal(event){
-for (var i=0; i<modals.length; i++){
-    //DOM manipulation
-    modals[i].style.display='block';
-//     button.style.display='none';
-}
+    console.log("opening");
+        modals[i].style.display='block';
 }
 
 // function closeModal(event){

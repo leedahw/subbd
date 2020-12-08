@@ -21,7 +21,7 @@ $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
         ]);
 
         var options = {
-          title: 'Your Subb Breakdown',
+          title: 'Breakdown By Category',
           pieHole: 0.6,
           colors: ['#5b49db','#ffa378','#ff55ec'],
         };
