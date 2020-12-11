@@ -17,17 +17,10 @@ include('includes/dbconfig.php');
 
 $stmt = $pdo->prepare("INSERT INTO `subscription` 
 	(`subId`, `userId`, `subName`,  `category`, `frequency`, `cost`, `currency`) 
-	VALUES (NULL, '$userId', '$subName', '$category', '$frequency', '$cost', '$currency');");
+	VALUES (NULL, '$userId', '$subName', '$category', '$frequency', '$cost', '$currency');"
+	);
 
 $stmt->execute();
-?>
-<p>Success!</p>
-<a href = "homepage.php">Back to Home</a><?php
-
 //header("Location: homepage.php");
-}else{
-	//do not show?>
-<p>ACCESS DENIED.Admin Access Only.</p>
-<a href = "homepage.php">Back to Home</p><?php
 }
 ?>

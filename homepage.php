@@ -63,7 +63,7 @@ $stmt1 = $pdo->prepare("SELECT * FROM `subscription`
 $stmt1->execute();
 while($row = $stmt1->fetch(PDO::FETCH_ASSOC)) { ?>
     <div class="drop-shadow" id="indiv-subb">
-    <button class="more-button" id="more-button"><i class="fas fa-ellipsis-v"></i></button>
+    <button class="more-button" id="more-button" data-subId="<?php echo($row["subId"]);?>"><i class="fas fa-ellipsis-v"></i></button>
     <div class="modal" id="modal">
         <!-- Modal content -->
         <div id="modal-content" class="modal-content drop-shadow">

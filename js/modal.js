@@ -2,10 +2,10 @@ var modals= document.getElementsByClassName(".modal");
 var spans= document.querySelectorAll(".close");
 var buttons= document.querySelectorAll(".more-button");
 
-
 buttons.forEach(button =>{
     button.addEventListener('click', event =>{
-        console.log(button);
+        var subId = event.target.getAttribute("data-subId");
+        console.log(subId);
             openModal();
     });
 });

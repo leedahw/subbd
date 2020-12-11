@@ -16,15 +16,15 @@ if($_SESSION["userId"]){
 <?php        
 //connect to db
 	include("includes/dbconfig.php");
-
+    
+    //get user information.ereference session userId
     $stmt = $pdo->prepare("SELECT * FROM `subscription` 
     WHERE `subscription` . `subId` = $subId");
 
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-//show a prefilled form we can edit
 ?>
+<!-- show a prefilled form we can edit -->
 <form id="edit-subb-form" action="process-edit-subb.php" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="subId" value="<?php echo($row["subId"]);?>"/>
     <input type="hidden" name="userId" value="<?php echo($row["userId"]);?>"/>
@@ -54,7 +54,7 @@ if($_SESSION["userId"]){
 <?php
 }else{
 ?>
-<p>ACCESS DENIED. Admin Acess Only</p>
+<p>Please Login First</p>
 <a href = "homepage.php">Back to Home</a><?php
 
 

@@ -30,7 +30,7 @@ $stmt->execute();
 }else{
 ?>
 <p>Please Login First.</p>
-<a href = "homepage.php">Back to Home</a>
+<a href = "login.php">Login</a>
 <?php
 
 }
