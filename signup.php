@@ -12,18 +12,23 @@ include("includes/standardheader.html");
     <meta name="author" content="Alana Dahwoon Lee">
     <title>signup page</title>
 </head>
-<body>
-    <form action = "process-signup.php" method = "POST">
-    First Name: <input type = "text" name ="fName" required/><br/>
+<body class="gradient-back">
+    <form class ="form" id="thanks" style="display:none;">	
+		<p id="message">Welcome! Login in Here! <a href="login.php">Back to Home</a></p>
+	</form>
+
+    <form class="drop-shadow" id= "signup-form">
+    <h2 class="form-title">SIGN UP</h2>
+    <input type= "text" class="form-input" name="fName" id="fName" placeholder= "First Name" required/><br/>
     <br/>
-    Last Name: <input type = "text" name ="lName" required/><br/>
+    <input type= "text" class="form-input" name="lName" id="lname" placeholder= "Last Name" required/><br/>
     <br/>
-    Email Address: <input email = "text" name = "emailAddress" required/><br/>
+    <input type= "text" class="form-input" name="emailAddress" id="emailAddress" placeholder= "Email Address" required/><br/>
     <br/>
-    password: <input type = "password" name = "password" required/><br/>
+    <input type= "password" class="form-input" name="password" id="password" placeholder= "Password" required/><br/>
     <br/>
-    <input type = "submit">
-    <a class="form-link" id="signup-link" style="color:grey" href ="login.php">Already a member? Login Here!</a>
+    <input type= "submit" id="submit-data"/>
+    <a class="form-link" id="login-link" style="color:grey" href ="login.php">Already a member? Login Here!</a>
     </form>
     
 </body>
