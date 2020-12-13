@@ -14,14 +14,14 @@ include("includes/standardheader.html");
 </head>
 <body class="gradient-back">
     <form class ="form" id="thanks" style="display:none;">	
-		<p id="message">Welcome! Login in Here! <a href="login.php">Back to Home</a></p>
+		<p id="message">Welcome!<a href="login.php">Login Here!</a></p>
 	</form>
 
-    <form class="drop-shadow" id= "signup-form">
+    <form class="drop-shadow" id="signup-form">
     <h2 class="form-title">SIGN UP</h2>
     <input type= "text" class="form-input" name="fName" id="fName" placeholder= "First Name" required/><br/>
     <br/>
-    <input type= "text" class="form-input" name="lName" id="lname" placeholder= "Last Name" required/><br/>
+    <input type= "text" class="form-input" name="lName" id="lName" placeholder= "Last Name" required/><br/>
     <br/>
     <input type= "text" class="form-input" name="emailAddress" id="emailAddress" placeholder= "Email Address" required/><br/>
     <br/>
@@ -30,6 +30,7 @@ include("includes/standardheader.html");
     <input type= "submit" id="submit-data"/>
     <a class="form-link" id="login-link" style="color:grey" href ="login.php">Already a member? Login Here!</a>
     </form>
-    
+
+<script src="js/signup.js"></script>
 </body>
 </html>

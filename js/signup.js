@@ -1,4 +1,4 @@
-let submitDataEl = document.querySelectorAll("#submit-data")[0];
+let submitData = document.querySelectorAll("#submit-data")[0];
 let form = document.querySelectorAll("#signup-form")[0];
 let fName = document.querySelectorAll("#fName")[0];
 let lName = document.querySelectorAll("#lName")[0];
@@ -8,11 +8,11 @@ let thanks = document.querySelectorAll("#thanks")[0];
 
 
 
-submitDataEl.addEventListener('click', submitDataEv,false);
+submitData.addEventListener('click', submitDataEv, false);
 
 function submitDataEv(event){
     event.preventDefault();
-    console.log(subName.value); //check to see if it's working
+    console.log(fName.value); //check to see if it's working
 
     var xhr = new XMLHttpRequest(); 
     xhr.onreadystatechange = function(e){     
@@ -21,9 +21,8 @@ function submitDataEv(event){
             console.log("CHECK DB TABLE");// modify or populate html elements based on response.
            } 
         //DOM manipulation
-        form.remove();
+        form.style.display= 'none';
         thanks.style.display = 'block';
-        submitDataEl.removeEventListener("click", submitDataEv, false);
 
     };
     
