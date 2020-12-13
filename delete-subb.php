@@ -32,7 +32,7 @@ $subId = $_GET["subId"];
     
 <form id="delete-subb-form" class="drop-shadow" style="width:fit-content">
     <h2 style="margin-bottom:2rem;">Are you sure you want to delete the following Subb?</h2>
-    <div class="drop-shadow" style="color:grey;background-color:#e8e8e8;border-radius:.5rem;padding:1rem;margin-bottom:2rem;">
+    <div class="drop-shadow" style="background-color:#e8e8e8;border-radius:.5rem;padding:1rem;margin-bottom:2rem;">
     <h3><?php echo($row["subName"]);?></h3>
     <p id="category"><?php echo($row["category"]);?></p>
     <p id="frequency"><?php echo($row["frequency"]);?></p>
