@@ -16,6 +16,7 @@ include('includes/standardheader.html');?>
         <div id="landing1" style="padding:2rem;width:fit-content">
             <h1 style="width: 500px; margin-top:0;">SUBB'D is Your One-Stop Hub to Manage Your Subscriptions</h1>
             <p style="width: 500px;">Take control of your subscriptions and see exactly where your money goes every month!</p><br/>
+            <a style="margin-right:1.5rem;padding:.5rem;"href="about.php">Learn More</a>
             <a href="signup.php" class="styled-btn" style="float:left;color:white;">Try it Now</a>
 
         </div>

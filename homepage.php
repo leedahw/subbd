@@ -115,5 +115,6 @@ while($row = $stmt1->fetch(PDO::FETCH_ASSOC)) { ?>
 <a style="margin-left:auto; margin-right:auto;" href = "login.php">Login Here</a>
 </form>
 </body>
+
 <?php
 }?>

@@ -3,7 +3,7 @@ session_start(); //session
 include('includes/standardheader.html');
 include('includes/dbconfig.php');
 
-if($_SESSION["userId"]){
+if(isset($_SESSION["userId"])){
 
 $userId= $_SESSION["userId"]; 
 //allowed to see this page ig logged in correctly
@@ -50,8 +50,13 @@ $userId= $_SESSION["userId"];
     </html><?php
 }else{    
 	//DO NOT SHOW this page
-	?>
-	<p>Please Login First</p>
-    <a href="login.php">Back to Home</a><?php
+?>
+<body class="gradient-back">
+<form class ="drop shadow form">
+<h2 style="margin-left:auto; margin-right:auto;">Please Login First</h2>
+<a style="margin-left:auto; margin-right:auto;" href = "login.php">Login Here</a>
+</form>
+</body>
+<?php
 }
 ?>

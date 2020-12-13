@@ -1,8 +1,9 @@
 <?php session_start();
+include("includes/standardheader.html");
 //delete article
-if($_SESSION["userId"]){
+if(isset($_SESSION["userId"])){
 //show page
-include("includes/standardheader.html");?>
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -81,8 +82,12 @@ $subId = $_GET["subId"];
 <?php
 }else{
     //block access?>
-    <p>Please Login First.</p>
-<a href = "login.php">Go To Login</a>
+<body class="gradient-back">
+<form class ="drop shadow form">
+<h2 style="margin-left:auto; margin-right:auto;">Please Login First</h2>
+<a style="margin-left:auto; margin-right:auto;" href = "login.php">Login Here</a>
+</form>
+</body>
 <?php
 }
 ?>
