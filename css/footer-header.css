@@ -58,3 +58,6 @@ float:right;
     margin-top:0px;
 }
 
+#logout-button:hover{
+    color:#ffa378;
+}

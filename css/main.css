@@ -27,6 +27,19 @@ a:link{
     float:right;
 }
 
+a:visited{
+    color:inherit;
+}
+
+a:hover{
+    color: #ffa378;
+}
+
+a:active{
+    color: #5b49db;
+}
+
+
 .drop-shadow{
     -moz-box-shadow: 3px 3px 5px rgba(0,0,0,0.4);
     -webkit-box-shadow: 3px 3px 5px rgba(0,0,0,0.4);
@@ -276,7 +289,7 @@ input{
     border-radius: .5rem;
 }
 
-input[type=submit] {
+input[type="submit"] {
     background-color: #fa0079;
     display:inline-block;
     width: fit-content;
@@ -293,7 +306,12 @@ input[type=submit] {
     text-align:center;
 }
 
-input[type=radio] {
+input[type="submit"]:hover{
+    background-color: #ffa378;
+}
+
+
+input[type="radio"] {
     display:inline-block;
     vertical-align: -2px;
     margin-left: -1px;

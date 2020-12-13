@@ -27,9 +27,21 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);?>
 <?php
 $stmt2 = $pdo->prepare("SELECT SUM(`cost`) AS sum_cost FROM `subscription` WHERE `userId`= '$userId' GROUP BY `userId`"); 
 $stmt2->execute();
-$row = $stmt2->fetch(PDO::FETCH_ASSOC);?>
+$row = $stmt2->fetch(PDO::FETCH_ASSOC);
 
-<h2 class="rem-margin">You are currently spending $<?php echo($row["sum_cost"]);?> per month on subscriptions.</h2>
+if (empty($row["sum_cost"])){
+    echo ("<h2 class='rem-margin'>");
+    echo("Please Add a New Subb");
+    echo("</h2>");
+}elseif(isset($row["sum_cost"])){
+    echo ("<h2 class='rem-margin'>");
+    echo("You are currently spending $");
+    echo($row["sum_cost"]);
+    echo(" per month on subscriptions.");
+    echo("</h2>");
+}
+
+?>
 <br/><br/>
 <!-- show donut chart of subbs based on category-->
 <section id="full-page">
@@ -63,16 +75,8 @@ $stmt1 = $pdo->prepare("SELECT * FROM `subscription`
 $stmt1->execute();
 while($row = $stmt1->fetch(PDO::FETCH_ASSOC)) { ?>
     <div class="drop-shadow" id="indiv-subb">
-    <button class="more-button" id="more-button" data-subId="<?php echo($row["subId"]);?>"><i class="fas fa-ellipsis-v"></i></button>
-    <div class="modal" id="modal">
-        <!-- Modal content -->
-        <div id="modal-content" class="modal-content drop-shadow">
-            <span class="close">&times;</span>
-            <p>edit / delete Subb?</p>
-            <a class= "link" id="edit-link" href = "edit-subb.php?subId=<?php echo($row["subId"]);?>">EDIT</a>
-            <a class ="link" id="delete-link" href="delete-subb.php?subId=<?php echo($row["subId"]);?>">DELETE</a>
-        </div>
-    </div>
+    <a style="margin-top:.75rem;" class= "link" id="edit-link" href = "edit-subb.php?subId=<?php echo($row["subId"]);?>">EDIT</a>
+    <a style="margin-top:.75rem;" class ="link" id="delete-link" href="delete-subb.php?subId=<?php echo($row["subId"]);?>">DELETE</a>
     <?php
     echo("<h3>");
     echo($row["subName"]);

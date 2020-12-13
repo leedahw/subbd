@@ -40,7 +40,7 @@ $userId= $_SESSION["userId"];
 			</select></h3>
 		<h3>Cost: $ <input type= "number" step= "0.01" id="cost" name="cost"/> <input type="text" id="currency" name="currency" value="CAD"/></h3>
 		<br/>
-		<input type="submit" id="submit-data" value= "submit"/>
+		<input class="btn drop-shadow" type="submit" id="submit-data" value= "submit"/>
 		<a id="cancel" href="homepage.php">Cancel</a>
 
 	</form>
