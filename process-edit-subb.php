@@ -1,9 +1,11 @@
 <?php 
 //insert-edit-article
 session_start();
+include('includes/standardheader.html');
 if ($_SESSION["userId"]){
 //show page
 //receive POST data from edit-article
+
 $subId = $_POST["subId"];
 $userId = $_SESSION["userId"];
 $subName = $_POST["subName"];
@@ -16,15 +18,19 @@ $currency= $_POST["currency"];
 include("includes/dbconfig.php");
 
 //update db with declared var
-$stmt = $pdo->prepare("UPDATE `article` 
+$stmt = $pdo->prepare("UPDATE `subscription` 
 SET `subId`='$subId' , `userId`='$userId' , `subName`='$subName' , `category`='$category' , `frequency`='$frequency', `cost`='$cost', `currency`='$currency'
 WHERE `subscription` . `subId` = $subId");
 
 $stmt->execute();
 ?>
+<body class="gradient-back">
+<form class ="drop shadow form">
+<h2 style="margin-left:auto; margin-right:auto;">Edit Submitted</h2>
+<a style="margin-left:auto; margin-right:auto;" href = "homepage.php">Back to Home</a>
+</form>
 
-<p>Edit Submitted</p>
-<a href = "homepage.php">Back to Home</a>
+</body>
 <?php
 
 }else{

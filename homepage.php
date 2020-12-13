@@ -31,7 +31,9 @@ $row = $stmt2->fetch(PDO::FETCH_ASSOC);
 
 if (empty($row["sum_cost"])){
     echo ("<h2 class='rem-margin'>");
+    echo ("<a href='insert-subb.php' style='float:left;'>");
     echo("Please Add a New Subb");
+    echo("</a>");
     echo("</h2>");
 }elseif(isset($row["sum_cost"])){
     echo ("<h2 class='rem-margin'>");

@@ -25,7 +25,7 @@ if($_SESSION["userId"]){
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 <!-- show a prefilled form we can edit -->
-<form id="edit-subb-form" action="process-edit-subb.php" method="POST" enctype="multipart/form-data">
+<form style="width:fit-content;" id="edit-subb-form" action="process-edit-subb.php" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="subId" value="<?php echo($row["subId"]);?>"/>
     <input type="hidden" name="userId" value="<?php echo($row["userId"]);?>"/>
     <h3>Subb Name: <input type="text" name="subName" value="<?php echo($row["subName"]);?>"><h3>
@@ -43,7 +43,7 @@ if($_SESSION["userId"]){
 			<option value = "monthly">monthly</option>
 			<option value = "yearly">yearly</option>
 		</select></h3>
-        <h3>Cost: $ <input type= "number" step= "0.01" id="currency" name="cost" value="<?php echo($row["cost"]);?>"/>
+        <h3>Cost: $ <input id="cost" type= "number" step= "0.01" id="currency" name="cost" value="<?php echo($row["cost"]);?>"/>
         <input type="text" id="currency"name="currency" value="<?php echo($row["currency"]);?>"/></h3>
 
         <input type="submit" value="Confirm Edit"/>
