@@ -16,13 +16,20 @@ include('includes/standardheader.html');?>
         <div id="landing1" style="padding:2rem;width:fit-content">
             <h1 style="width: 500px; margin-top:0;">SUBB'D is Your One-Stop Hub to Manage Your Subscriptions</h1>
             <p style="width: 500px;">Take control of your subscriptions and see exactly where your money goes every month!</p><br/>
-            <input style="margin-left:auto;margin-right:auto"type = "submit" name= "signup" value = "TRY IT NOW">
+            <a href="signup.php" class="styled-btn" style="float:left;color:white;">Try it Now</a>
 
         </div>
     </section>
 
-    <section id="drop-shadow border-radius" id="member-message">
+    <section class="drop-shadow border-radius" id="member-section" style="margin-top:3rem;margin-bottom:3rem;">
+    <div id="member-back" style="left:3rem;">
+    </div>
+        <div id="member1" style="padding:2rem;width:fit-content; left:3rem;">
+            <h1 style="margin-top:0;">Already A member?</h1>
+            <p>Then you know how it works!</p><br/>
+            <a href="login.php" class="styled-btn" style="float:left;color:white;">Welcome Back</a>
 
+        </div>
     </section>
 
 
