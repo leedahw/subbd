@@ -384,6 +384,16 @@ font-size: 1.2rem;
     background-size:contain;
     background-position-y: center;
     background-repeat: no-repeat;
+}
+
+#profile-back{
+    background-image: url("../imgs/hello.jpg");
+    float:right;
+    width:60%;
+    height: 500px;
+    background-size:contain;
+    background-position-y: center;
+    background-repeat: no-repeat;
 
 }
 

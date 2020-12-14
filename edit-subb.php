@@ -1,6 +1,6 @@
 <?php session_start();
 include('includes/standardheader.html');
-if(isset($_SESSION["userId"])){
+if($_SESSION["userId"]){
 //if logged in then show this page
    $subId = $_GET["subId"];?>
 <html lang="en">
@@ -25,7 +25,7 @@ if(isset($_SESSION["userId"])){
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 <!-- show a prefilled form we can edit -->
-<form style="width:fit-content;" id="edit-subb-form" action="process-edit-subb.php" method="POST" enctype="multipart/form-data">
+<form class="drop-shadow" style="width:fit-content" id="edit-subb-form" action="process-edit-subb.php" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="subId" value="<?php echo($row["subId"]);?>"/>
     <input type="hidden" name="userId" value="<?php echo($row["userId"]);?>"/>
     <h3>Subb Name: <input type="text" name="subName" value="<?php echo($row["subName"]);?>"><h3>
@@ -43,7 +43,7 @@ if(isset($_SESSION["userId"])){
 			<option value = "monthly">monthly</option>
 			<option value = "yearly">yearly</option>
 		</select></h3>
-        <h3>Cost: $ <input id="cost" type= "number" step= "0.01" id="currency" name="cost" value="<?php echo($row["cost"]);?>"/>
+        <h3>Cost: $ <input type= "number" step= "0.01" id="currency" name="cost" value="<?php echo($row["cost"]);?>"/>
         <input type="text" id="currency"name="currency" value="<?php echo($row["currency"]);?>"/></h3>
 
         <input type="submit" value="Confirm Edit"/>
@@ -54,12 +54,9 @@ if(isset($_SESSION["userId"])){
 <?php
 }else{
 ?>
-<body class="gradient-back">
-<form class ="drop shadow form">
-<h2 style="margin-left:auto; margin-right:auto;">Please Login First</h2>
-<a style="margin-left:auto; margin-right:auto;" href = "login.php">Login Here</a>
-</form>
-</body>
-<?php
+<p>Please Login First</p>
+<a href = "homepage.php">Back to Home</a><?php
+
+
 }
 ?>
