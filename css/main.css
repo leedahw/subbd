@@ -59,6 +59,10 @@ margin-right: auto;
     margin-left:2rem;
 }
 
+.no-bottom-margin{
+    margin-bottom: .5rem;;
+}
+
 
 /*~~homepage-subbs~~*/
 #indiv-subb {
@@ -383,6 +387,20 @@ font-size: 1.2rem;
 
 }
 
+#graphic-back{
+    z-index: -1;
+    background-image: url("../imgs/graphic.jpg");
+    float:right;
+    width:60%;
+    height: 500px;
+    background-size:contain;
+    background-position-y: center;
+    background-position-x: center;
+    background-repeat: no-repeat;
+
+}
+
+
 #member-back{
     z-index: -1;
     background-image: url("../imgs/member.jpg");
@@ -410,7 +428,6 @@ font-size: 1.2rem;
     flex-direction:row;
     align-items:center;
     justify-content:center;
-
 }
 
 #member-section{

@@ -32,25 +32,5 @@ include('includes/standardheader.html');?>
 
         </div>
     </section>
-
-
-
-
-
-
-<!-- old landing
-    <div class="drop-shadow" style="width:fit-content; background-color:white; border-radius:.5rem; margin-left:auto;margin-right:auto
-    ;margin-top:13rem;">
-    <img src="imgs/logo.png" style="background-color:white;margin-left:5rem;margin-top:3rem;"/></br/>
-    <h2 style="margin-left:6rem;">SUBB'D</h2>
-    <form id="landing-form" action = "login.php" method ="POST">
-    <h4 style="margin-left:auto;margin-right:auto;margin-bottom:.5rem;margin-top:0;color:grey;">Hi There!!</h2>
-    <input style="margin-left:auto;margin-right:auto"type = "submit" name= "login" value = "LOGIN">
-    </form>
-    <form id="landing-form"action = "signup.php" method = "POST">
-    <h4 style="margin-left:auto;margin-right:auto;margin-bottom:.5rem;margin-top:0;color:grey;">New User?</h2>
-    <input style="margin-left:auto;margin-right:auto"type = "submit" name= "signup" value = "SIGNUP">
-    </form>
-</div> -->
 </body>
 </html>
