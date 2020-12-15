@@ -28,7 +28,10 @@ WHERE `subscription`.`userId` = $userId AND `subscription`.`category`= 'producti
 $stmt->execute();
 
 while($row = $stmt->fetch(PDO:: FETCH_ASSOC)){
-    echo("<div class='blue-back drop-shadow' id=view-subbs>");
+    echo("<div class='blue-back drop-shadow' id=view-subbs>");?>
+    <a style="margin-top:.75rem; color:white;" id="edit-link" href = "edit-subb.php?subId=<?php echo($row["subId"]);?>">EDIT</a>
+    <a style="margin-top:.75rem; color:white;" id="delete-link" href="delete-subb.php?subId=<?php echo($row["subId"]);?>">DELETE</a>
+    <?php
     echo("<h3>");
     echo($row["subName"]);
     echo("</h3>");
