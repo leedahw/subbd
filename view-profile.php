@@ -10,10 +10,10 @@ if(isset($_SESSION["userId"])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="home page/ dashboard for subbd">
+    <meta name="description" content="visual subscription manager">
     <meta name="keywords" content="subbd homepage">
     <meta name="author" content="Alana Dahwoon Lee">
-    <title>Subb'd</title>
+    <title>Subb'd - Your Personal Subscription Manager</title>
 </head>
 <?php
     
