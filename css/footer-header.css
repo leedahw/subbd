@@ -1,0 +1,63 @@
+
+header{
+    font-family: Mulish;
+    font-weight: 400;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    color: black;
+
+
+}
+
+#header-nav{
+    width: 100vw;
+    padding-left: 0px;
+    display: flex;
+    align-items: center;
+}
+
+li{
+    list-style-type: none;
+    display: inline-block;
+    margin-left:1rem;
+}
+
+
+i{
+    display:relative;
+}
+
+#logo{
+    width:32px;
+    margin:1rem;
+}
+
+a:link{
+    margin-top:0px;
+    color:#222222;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+#blankli {
+float:right;
+}
+
+#logout-button {
+    color:grey;
+    font-weight:400;
+    font-size: .8rem;
+    width: 70px;
+    left: 80%;
+}
+
+#header-item {
+    margin-top:0px;
+}
+
+#logout-button:hover{
+    color:#ffa378;
+}
