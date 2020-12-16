@@ -3,6 +3,7 @@ include('includes/standardheader.html');
 if($_SESSION["userId"]){
 //if logged in then show this page
    $subId = $_GET["subId"];?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">

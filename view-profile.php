@@ -6,6 +6,7 @@ include("includes/standardheader.html");
 if(isset($_SESSION["userId"])){
     $userId = $_SESSION["userId"];
 ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">

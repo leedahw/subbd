@@ -9,7 +9,7 @@ $userId= $_SESSION["userId"];
 //allowed to see this page ig logged in correctly
 //insert-article.php
 ?>
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">

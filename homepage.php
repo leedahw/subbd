@@ -7,6 +7,7 @@ if(isset($_SESSION["userId"])){
 //value for userId insert into subscription table 
 $userId = $_SESSION["userId"];
 ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">

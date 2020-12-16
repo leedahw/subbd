@@ -4,6 +4,7 @@ include("includes/standardheader.html");
 if(isset($_SESSION["userId"])){
 //show page
 ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
